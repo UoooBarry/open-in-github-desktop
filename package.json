@@ -3,6 +3,7 @@
 	"displayName": "githubdesktop-open",
 	"description": "Open github desktop UI",
 	"version": "0.0.1",
+	"publisher": "UoooBarry",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
