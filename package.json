@@ -2,7 +2,7 @@
 	"name": "githubdesktop-open",
 	"displayName": "Open project in GitHub Desktop",
 	"description": "Open your project in GitHub Desktop easily",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "UoooBarry",
 	"engines": {
 		"vscode": "^1.62.0"
