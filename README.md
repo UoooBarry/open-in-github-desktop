@@ -1,6 +1,8 @@
 # README
 
-A simple extension for opening current workspace in GitHub desktop.
+A simple extension for opening current workspace in GitHub desktop. 
+
+Install from [Vscode Marketplace](https://marketplace.visualstudio.com/items?itemName=UoooBarry.githubdesktop-open)
 
 ## Before use
 
