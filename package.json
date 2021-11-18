@@ -1,15 +1,24 @@
 {
 	"name": "githubdesktop-open",
-	"displayName": "githubdesktop-open",
-	"description": "Open github desktop UI",
-	"version": "0.0.1",
+	"displayName": "Open project in GitHub Desktop",
+	"description": "Open your project in GitHub Desktop easily",
+	"version": "0.0.2",
 	"publisher": "UoooBarry",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
+	"icon": "assets/GitHub-Mark-120px-plus.png",
 	"categories": [
 		"Other"
 	],
+	"bugs": {
+		"url": "https://github.com/UoooBarry/open-in-github-desktop/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/UoooBarry/open-in-github-desktop"
+	},
+	"homepage": "https://github.com/UoooBarry/open-in-github-desktop",
 	"activationEvents": [
 		"onStartupFinished"
 	],
@@ -19,8 +28,21 @@
 			{
 				"command": "githubdesktop-open.open-in-github-desktop",
 				"title": "Open in Github Desktop"
+			},
+			{
+				"command": "githubdesktop-open.open-in-github-desktop-from-folder",
+				"title": "Open in Github Desktop from folder"
 			}
-		]
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "githubdesktop-open.open-in-github-desktop-from-folder",
+					"group": "githubdesktop-open",
+					"when": "explorerResourceIsFolder"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -44,6 +66,5 @@
 		"@vscode/test-electron": "^1.6.2"
 	},
 	"dependencies": {
-		"@wraith13/vscel": "0.0.53"
 	}
 }
