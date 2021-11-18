@@ -10,10 +10,12 @@ Please install [GitHub Desktop](https://desktop.github.com/). Also install comma
 
 ## Usage
 
-When finished editing, click the github icon from status bar to open current workspace in GitHub Desktop.
+When finished editing, click the <img src="./assets/GitHub-Mark-32px.png" > icon from status bar to open current workspace in GitHub Desktop.
 
-<img src="./assets/GitHub-Mark-32px.png" />
+<img src="./assets/from_status_bar.gif" />
 
 Or right click on explore folder and select `Open in Github Desktop from folder` from the context menu.
+
+<img src="./assets/from_context.gif" />
 
 <img src="./assets/context.png" />
