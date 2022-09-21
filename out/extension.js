@@ -5,6 +5,7 @@ exports.deactivate = exports.activate = void 0;
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
 const utils_1 = require("./utils");
+const environmentProcess_1 = require("./environment/environmentProcess");
 const openInGithubDesktop = vscode.commands.registerCommand('githubdesktop-open.open-in-github-desktop', async () => {
     if (vscode.window.activeTextEditor) {
         let currentlyOpenTabFilePath = vscode.window.activeTextEditor.document.fileName;
@@ -26,6 +27,12 @@ btn.show();
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 const activate = (context) => {
+    (0, environmentProcess_1.checkGithubCli)().catch((e) => {
+        if (e instanceof environmentProcess_1.EnvironmentError) {
+            vscode.window.showErrorMessage(e.message, ...e.items)
+                .then(environmentProcess_1.handleSelection);
+        }
+    });
     context.subscriptions.push(openInGithubDesktop);
     context.subscriptions.push(openInGithubDesktopFromFolder);
     context.subscriptions.push(btn);
