@@ -4,7 +4,7 @@ exports.getSelectedFolder = exports.execShell = void 0;
 const cp = require("child_process");
 const vscode = require("vscode");
 const execShell = (cmd) => {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         cp.exec(cmd, (err, out) => {
             if (err) {
                 return reject(err);
